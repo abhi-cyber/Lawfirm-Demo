@@ -23,7 +23,7 @@ interface TaskKanbanMobileProps {
 }
 
 export function TaskKanbanMobile({
-  tasks,
+  tasks: _tasks,
   tasksByStatus,
   onEdit,
   onDelete,

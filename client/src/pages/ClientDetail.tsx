@@ -11,22 +11,13 @@ import {
   FileText,
   ListTodo,
   MessageSquare,
-  Plus,
   Send,
 } from "lucide-react";
-import {
-  getClientById,
-  getCases,
-  getTasks,
-  addClientNote,
-  deleteClient,
-} from "@/services/api";
+import {getClientById, getCases, getTasks, addClientNote} from "@/services/api";
 import {
   PageHeader,
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
   Badge,
   Button,
   Skeleton,

@@ -1,13 +1,6 @@
 import {useMemo} from "react";
 import {useQuery} from "@tanstack/react-query";
-import {
-  Briefcase,
-  Users,
-  CheckSquare,
-  AlertTriangle,
-  TrendingUp,
-  Clock,
-} from "lucide-react";
+import {Briefcase, Users, CheckSquare, AlertTriangle} from "lucide-react";
 import {getClients, getCases, getTasks} from "@/services/api";
 import {PageHeader} from "@/components/ui";
 import {

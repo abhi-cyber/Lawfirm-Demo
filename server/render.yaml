@@ -1,0 +1,28 @@
+# Render Blueprint for ABC Law Firm API
+# This file configures the backend deployment on Render
+
+services:
+  - type: web
+    name: abc-law-firm-api
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        sync: false  # Set manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false  # Set manually in Render dashboard
+      - key: USE_LOCAL_LLM
+        value: false
+      - key: OPENAI_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+    healthCheckPath: /
+    autoDeploy: true
+

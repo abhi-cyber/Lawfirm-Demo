@@ -15,7 +15,7 @@ import {KanbanColumn} from "./KanbanColumn";
 import {KanbanCard} from "./KanbanCard";
 import {CaseKanbanMobile} from "./CaseKanbanMobile";
 import {useSidebar} from "@/contexts/SidebarContext";
-import type {ICase, IUser} from "@/types";
+import type {ICase} from "@/types";
 
 const STATUS_COLUMNS: {id: ICase["status"]; title: string; color: string}[] = [
   {id: "intake", title: "Intake", color: "bg-blue-500"},
@@ -63,7 +63,7 @@ export function CaseKanban() {
       );
       return {previousCases};
     },
-    onError: (err, variables, context) => {
+    onError: (_err, _variables, context) => {
       if (context?.previousCases) {
         queryClient.setQueryData(["cases"], context.previousCases);
       }

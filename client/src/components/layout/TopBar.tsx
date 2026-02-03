@@ -18,7 +18,6 @@ import {
 import {cn} from "@/lib/utils";
 import {Button, Avatar} from "@/components/ui";
 import {getClients, getCases, getTasks, getUsers} from "@/services/api";
-import type {IClient, ICase, ITask, IUser} from "@/types";
 import {ClientFormModal} from "@/components/features/clients";
 import {CaseFormModal} from "@/components/features/cases";
 import {TaskFormModal} from "@/components/features/tasks";

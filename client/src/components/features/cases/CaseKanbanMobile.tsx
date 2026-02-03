@@ -22,7 +22,7 @@ interface CaseKanbanMobileProps {
 }
 
 export function CaseKanbanMobile({
-  cases,
+  cases: _cases,
   casesByStatus,
 }: CaseKanbanMobileProps) {
   const [activeTab, setActiveTab] = useState<ICase["status"]>("intake");

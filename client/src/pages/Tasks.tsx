@@ -19,7 +19,7 @@ import {
   TaskKanbanMobile,
 } from "@/components/features/tasks";
 import {useSidebar} from "@/contexts/SidebarContext";
-import type {ITask, IUser} from "@/types";
+import type {ITask} from "@/types";
 
 const STATUS_COLUMNS: {id: ITask["status"]; title: string; color: string}[] = [
   {id: "pending", title: "Pending", color: "bg-slate-500"},
@@ -71,7 +71,7 @@ const Tasks = () => {
       );
       return {previousTasks};
     },
-    onError: (err, variables, context) => {
+    onError: (_err, _variables, context) => {
       if (context?.previousTasks) {
         queryClient.setQueryData(["tasks"], context.previousTasks);
       }
